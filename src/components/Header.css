@@ -1,0 +1,19 @@
+@media(max-width: 1000px) {
+  .header-nav {
+    mask-image:-webkit-linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    mask-image: -moz-linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: -webkit-linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: -moz-linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  }
+}
+
+.header-nav::-webkit-scrollbar {
+  display: none;
+}
+.header-nav {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}

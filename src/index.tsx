@@ -1,12 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
+import App from './components/App';
 import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import { mergeStyles } from '@uifabric/styling';
+import { initializeIcons } from '@uifabric/icons';
+initializeIcons();
 
-ReactDOM.render(<App />, document.getElementById('root'));
+// Inject some global styles
+mergeStyles({
+  selectors: {
+    ':global(body), :global(html), :global(#app)': {
+      margin: 0,
+      padding: 0,
+      height: '100vh',
+    },
+  },
+});
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render(
+  <Router basename='/Team:SEU-Nanjing-China'>
+    <App />
+  </Router>,
+  document.getElementById('root')
+);
