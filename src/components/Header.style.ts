@@ -18,7 +18,7 @@ const headerStyles: IHeaderStyles = {
       background:
         'linear-gradient(to top, rgba(0, 61, 84, .94) 0%, rgba(0, 91, 112, .97))',
       color: NeutralColors.gray20,
-      boxShadow: '0 6.4px 14.4px 0 rgba(0,0,0,.132), 0 1.2px 3.6px 0 rgba(0,0,0,.108)',
+      boxShadow: '0 25.6px 57.6px 0 rgba(0,0,0,.22), 0 4.8px 14.4px 0 rgba(0,0,0,.18)',
       position: 'fixed',
       left: 0,
       top: 18,
@@ -119,7 +119,7 @@ const headerStyles: IHeaderStyles = {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        minWidth: 85,
+        minWidth: 90,
         selectors: {
           ':hover': {
             background: 'rgba(255, 255, 255, .2)',
@@ -129,7 +129,7 @@ const headerStyles: IHeaderStyles = {
             color: NeutralColors.gray180,
           },
           '@media(max-width: 1000px)': {
-            minWidth: 75,
+            minWidth: 80,
           },
         },
       },

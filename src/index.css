@@ -15,7 +15,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
+	font-size: 62.5%;
 	font: inherit;
 	vertical-align: baseline;
 }
@@ -47,13 +47,19 @@ table {
 
 #home_logo, #sideMenu { display:none; }
 #sideMenu, #top_title, .patrollink  {display:none;}
-#content { margin-left:0px; margin-top:-7px; padding:0px; width:100%;line-height:1;}
-body {background-color:white; }
+#content { margin: 0; padding:0px; width:100%;line-height:1; position: absolute; top: 0; }
 #bodyContent h1, #bodyContent h2, #bodyContent h3, #bodyContent h4, #bodyContent h5 { margin-bottom: 0px; }
 .judges-will-not-evaluate { border: 4px solid #e4dede; padding: 2% !important; width: 92%!important;}
 
 /********************************************/
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background: url(https://2019.igem.org/wiki/images/3/3f/T--SEU-Nanjing-China--bg.20190621.png);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+#App {
+  position: absolute;
+  top: 18px;
+  width: 100%;
+  font-family: Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
 }

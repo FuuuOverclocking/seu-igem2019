@@ -1,22 +1,28 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
-import App from './components/App';
-import './index.css';
-import { mergeStyles } from '@uifabric/styling';
-import { initializeIcons } from '@uifabric/icons';
-initializeIcons();
+import { Switch } from 'react-router';
 
-// Inject some global styles
-mergeStyles({
-  selectors: {
-    ':global(body), :global(html), :global(#app)': {
-      margin: 0,
-      padding: 0,
-      height: '100vh',
-    },
-  },
-});
+import './index.css';
+
+import Header from './components/Header';
+import Loading from './components/Loading';
+import Footer from './components/Footer';
+import { pages } from './pages';
+
+const App: React.FunctionComponent = () => {
+  return (
+    <div id='App'>
+      <Header />
+      <Suspense fallback={<Loading />}>
+        {
+          pages
+        }
+      </Suspense>
+      <Footer />
+    </div>
+  );
+};
 
 ReactDOM.render(
   <Router basename='/Team:SEU-Nanjing-China'>

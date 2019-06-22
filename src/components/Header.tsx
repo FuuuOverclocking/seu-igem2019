@@ -1,8 +1,9 @@
 import React from 'react';
 import classes from './Header.style';
-import { css, SearchBox } from 'office-ui-fabric-react';
+import { css } from 'office-ui-fabric-react';
 import './Header.css';
-import { withRouter, RouteComponentProps, StaticContext } from 'react-router';
+import { withRouter } from 'react-router';
+import { assets } from '../util';
 
 class Header extends React.Component<any, {}> {
 
@@ -28,10 +29,7 @@ class Header extends React.Component<any, {}> {
               onClick={this.handleLinkClick('/')}
             >
               <img
-                src={
-                  'https://2019.igem.org/wiki/images/thumb/b/bf/' +
-                  'T--SEU-Nanjing-China--logo.a69a88cd.png/' +
-                  '240px-T--SEU-Nanjing-China--logo.a69a88cd.png'}
+                src={assets.img.logo}
                 alt='seu-logo'
                 className={css(classes.logo)}
               />
